@@ -9,7 +9,6 @@ import { FormFlowDemo } from "@/components/demos/formflow-demo"
 import { SecureRecordViewerDemo } from "@/components/demos/secure-record-viewer-demo"
 import { KakeiboDemo } from "@/components/demos/kakeibo-demo"
 import { KotobaTabiDemo } from "@/components/demos/kotoba-tabi-demo"
-import { PermitOpsDemo } from "@/components/demos/permitops-demo"
 import { getDemoBySlug, getDemos } from "@/lib/portfolio-content"
 
 type PageProps = {
@@ -26,7 +25,6 @@ const demoComponents = {
   "secure-record-viewer": SecureRecordViewerDemo,
   "kakeibo": KakeiboDemo,
   "kotoba-tabi": KotobaTabiDemo,
-  "permitops": PermitOpsDemo,
 } as const
 
 export async function generateStaticParams() {

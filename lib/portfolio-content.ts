@@ -809,97 +809,6 @@ const caseStudies: CaseStudy[] = [
     ],
   },
   {
-    slug: "permitops",
-    title: "PermitOps",
-    demoHref: "/demos/permitops",
-    hero: {
-      eyebrow: "B2B SaaS Case Study",
-      intro:
-        "A multi-tenant foreign worker management platform — visa lifecycle tracking, counseling records, and a record data connector — built for immigration support companies managing dozens of client employers.",
-      description:
-        "PermitOps is the internal operator team's internal product for managing the full lifecycle of foreign workers in Japan: visa stages, residence card expiry, counseling meetings, support actions, and employer data sync. The system has to stay accurate across multiple client tenants while keeping each employer's data strictly isolated at the database level.",
-    },
-    summary: {
-      label: "Core result",
-      value: "One surface for the full lifecycle",
-      detail:
-        "Visa status, expiry alerts, counseling records, and support actions are tracked in one place — with source sync keeping the supporting data in both systems without manual re-entry.",
-    },
-    stats: [
-      {
-        label: "Tenancy model",
-        value: "RLS-enforced isolation",
-        detail: "Every query runs behind Supabase Row Level Security. No application-layer filter can accidentally leak one employer's workers to another tenant.",
-      },
-      {
-        label: "source connector",
-        value: "OAuth2 + batch sync",
-        detail: "Token refresh is automatic. Batch sync uses 500-record cursor pagination so large employer datasets sync without truncation.",
-      },
-      {
-        label: "Meeting taxonomy",
-        value: "3-level hierarchy",
-        detail: "60+ counseling categories organized as section → item → detail — enough granularity for compliance records without overwhelming daily users.",
-      },
-    ],
-    sections: [
-      {
-        title: "Problem",
-        body:
-          "Immigration support companies in Japan manage foreign workers across multiple employer clients — each with different visa types, expiry dates, counseling histories, and support needs. The data lived in Record System, spreadsheets, and email. There was no surface that put visa lifecycle, meeting records, and open support actions in one place, and no reliable alert system for cards expiring within 30 days.",
-      },
-      {
-        title: "Constraints",
-        body:
-          "Multi-tenancy was non-negotiable: each immigration company manages multiple employer clients, and data leakage between tenants would be a serious compliance failure. The Record System integration also had to handle real-world API constraints — OAuth2 token expiry, batch limits, and field mapping that varies per employer.",
-        bullets: [
-          "Supabase RLS enforces per-tenant isolation regardless of application-layer bugs",
-          "source-system OAuth2 tokens expire — refresh must be automatic, not manual",
-          "Batch sync must handle datasets larger than Record System's 500-record single-call limit",
-          "Counseling records required a taxonomy flexible enough for compliance needs without training overhead",
-        ],
-      },
-      {
-        title: "Visa Lifecycle Tracking",
-        body:
-          "Each worker's visa stage is tracked through 7 defined checkpoints: 相談 → 書類準備 → 申請中 → 審査中 → 許可 → カード発行 → 完了. The dashboard surfaces workers with residence cards expiring within 30 days as the primary urgency signal — sorted by days remaining, color-coded by severity.",
-        bullets: [
-          "7-stage visa pipeline with per-worker progress tracking",
-          "Residence card expiry alert sorted by days remaining — critical (≤14d), warning (≤30d)",
-          "Stage transitions are logged with timestamps for audit and compliance records",
-          "Expiry dashboard replaces the manual spreadsheet check that missed renewals",
-        ],
-      },
-      {
-        title: "Source Connector",
-        body:
-          "The source connector handles OAuth2 token management automatically — expired tokens are refreshed before any sync run. Field mapping is configured per employer via a UI, not hardcoded: each source app field maps to the corresponding PermitOps field, and the mapping is stored per-tenant in Supabase.",
-        bullets: [
-          "OAuth2 with automatic token refresh — no manual token rotation required",
-          "Cursor-based batch sync: 500 records per request until all records are fetched",
-          "Per-employer field mapping UI — no code change needed when a client's Record System schema differs",
-          "Access log per sync run with timestamp, record count, and error state",
-        ],
-      },
-      {
-        title: "Meeting and Support Records",
-        body:
-          "Counseling meetings are categorized using a 3-level taxonomy (section → item → detail) covering 60+ categories across work, health, mental health, career, and daily life. Support actions are separate from meetings — each action has a status (open / in progress / done), assignee, due date, and category.",
-        bullets: [
-          "3-level meeting taxonomy: section → item → detail for structured compliance records",
-          "Support actions tracked independently from meetings — each with assignee, due date, and status",
-          "Meeting severity rated per session — determines prioritization in the support view",
-          "Action status grid gives a per-worker view of open, in-progress, and completed items",
-        ],
-      },
-      {
-        title: "Outcome",
-        body:
-          "PermitOps consolidated visa lifecycle, counseling records, and support actions into one surface — replacing the spreadsheet-and-email workflow that was missing expiry alerts and had no unified meeting history. The source connector keeps supporting data in sync without manual re-entry, and the RLS isolation model meets the tenant separation requirements for a multi-client immigration support business.",
-      },
-    ],
-  },
-  {
     slug: "kpi-monitoring",
     title: "KPI Monitoring Dashboard",
     hero: {
@@ -1096,19 +1005,6 @@ const caseStudyPreviews: CaseStudyPreview[] = [
       "A cross-platform, multi-currency budgeting app with OCR scanning, 5 account types, CSV import/export, and a daily habit loop that works offline, in-browser, or synced — without the sign-up friction that kills adoption.",
   },
   {
-    title: "PermitOps",
-    slug: "permitops",
-    demoHref: "/demos/permitops",
-    problem:
-      "Immigration support companies had no unified view of foreign workers' visa stages, expiry dates, counseling history, and open support actions — data was scattered across Record System, spreadsheets, and email.",
-    constraints:
-      "Multi-tenant isolation had to hold at the database layer, not just the application layer. source-system OAuth2 tokens expire, batch sync must handle large datasets, and field mapping varies per employer client.",
-    decisions:
-      "Supabase RLS for per-tenant isolation, automatic OAuth2 token refresh, cursor-based batch sync at 500 records/request, per-employer field mapping UI, and a 3-level counseling taxonomy for compliance records.",
-    outcome:
-      "Visa lifecycle, counseling records, and support actions in one surface — with residence card expiry alerts replacing missed manual checks and source sync eliminating double-entry across systems.",
-  },
-  {
     title: "Kotoba Tabi",
     slug: "kotoba-tabi",
     demoHref: "/demos/kotoba-tabi",
@@ -1237,19 +1133,6 @@ const demos: Demo[] = [
       "Check your daily dashboard — XP bar, streak, skill progress, and today's quests",
       "Navigate the quest map — see completed, unlocked, and locked stages",
       "Try the Quiz tab — answer real JP→ID questions and see your score",
-    ],
-  },
-  {
-    slug: "permitops",
-    title: "PermitOps Demo",
-    eyebrow: "Interactive Demo",
-    description:
-      "A fake-data walkthrough of the PermitOps foreign worker management platform — visa stage tracking, residence card expiry alerts, counseling records, support actions, and the source connector with field mapping and animated sync.",
-    caseStudyHref: "/case-studies/permitops",
-    highlights: [
-      "Track visa stages and residence card expiry for 6 mock workers",
-      "Browse counseling meeting records with 3-level category taxonomy",
-      "Inspect the source connector — field mapping, OAuth status, and live sync",
     ],
   },
   {
