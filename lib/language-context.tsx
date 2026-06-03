@@ -23,7 +23,10 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     const saved = localStorage.getItem("locale") as Locale | null
-    if (saved === "en" || saved === "ja") setLocale(saved)
+    if (saved !== "en" && saved !== "ja") return
+
+    const frame = window.requestAnimationFrame(() => setLocale(saved))
+    return () => window.cancelAnimationFrame(frame)
   }, [])
 
   const toggle = useCallback(() => {

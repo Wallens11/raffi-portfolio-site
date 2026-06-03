@@ -226,7 +226,7 @@ export function KakeiboDemo() {
 
             {/* Weekly nudge */}
             <div className="rounded-2xl p-3 pl-4" style={{ background: CARD, border: `1px solid ${BORDER}`, borderLeft: "3px solid #c4620a" }}>
-              <p className="text-[10px] font-semibold" style={{ color: "#c4620a" }}>This week's nudge</p>
+              <p className="text-[10px] font-semibold" style={{ color: "#c4620a" }}>This week&apos;s nudge</p>
               <p className="text-sm font-bold mt-0.5" style={{ color: TEXT }}>Groceries is the biggest spend this month.</p>
             </div>
 

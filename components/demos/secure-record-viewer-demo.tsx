@@ -263,7 +263,7 @@ export function SecureRecordViewerDemo() {
                       </Button>
                     </div>
                     {passwordCorrect === false && (
-                      <p className="text-[11px] text-red-400 mt-2">Incorrect password. Try "demo123".</p>
+                      <p className="text-[11px] text-red-400 mt-2">Incorrect password. Try &quot;demo123&quot;.</p>
                     )}
                   </div>
                 )}
