@@ -101,6 +101,11 @@ describe("portfolio content", () => {
           demoHref: "/demos/record-sync-service",
         }),
         expect.objectContaining({
+          title: "Document Template Studio",
+          href: "/case-studies/document-template-studio",
+          status: "Private product work",
+        }),
+        expect.objectContaining({
           title: "Internal Metrics Dashboard",
           href: "/case-studies/internal-metrics-dashboard",
         }),

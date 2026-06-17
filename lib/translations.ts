@@ -77,8 +77,8 @@ export const translations = {
       ],
     },
     featuredProjects: {
-      sectionLabel: "Featured Projects",
-      heading: "Systems that operators trust when it matters most.",
+      sectionLabel: "Featured Product Work",
+      heading: "Products and systems I can walk through from problem to implementation.",
       readCaseStudy: "Read full case study",
       tryDemo: "Try runnable demo",
     },
@@ -281,8 +281,8 @@ export const translations = {
       ],
     },
     featuredProjects: {
-      sectionLabel: "注目プロジェクト",
-      heading: "最も重要な瞬間にオペレーターが信頼するシステム。",
+      sectionLabel: "注目プロダクトワーク",
+      heading: "課題整理から実装まで説明できるプロダクトとシステム。",
       readCaseStudy: "ケーススタディ全文を読む",
       tryDemo: "実際に動くデモを試す",
     },

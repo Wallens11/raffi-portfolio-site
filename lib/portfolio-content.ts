@@ -2,7 +2,7 @@ export type FeaturedProject = {
   title: string
   description: string
   tags: string[]
-  icon: "cpu" | "sync" | "chart"
+  icon: "cpu" | "sync" | "chart" | "template"
   highlight: string
   href?: string
   demoHref?: string
@@ -912,6 +912,16 @@ const featuredProjects: FeaturedProject[] = [
     highlight: "Designed to make duplicate handling and diagnostics operator-friendly.",
     href: "/case-studies/record-sync-service",
     demoHref: "/demos/record-sync-service",
+  },
+  {
+    title: "Document Template Studio",
+    description:
+      "A private product workspace for migrating report templates, validating vendor-shaped inputs, and reviewing normalized output before rollout.",
+    tags: ["Document Automation", "Migration Tooling", "Template Studio"],
+    icon: "template",
+    highlight: "Presented as product work only; source code and internal artifacts stay private.",
+    href: "/case-studies/document-template-studio",
+    status: "Private product work",
   },
   {
     title: "Internal Metrics Dashboard",

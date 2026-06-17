@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { ArrowUpRight, BarChart3, Cpu, RefreshCw } from "lucide-react"
+import { ArrowUpRight, BarChart3, Cpu, FileText, RefreshCw } from "lucide-react"
 import { getFeaturedProjects } from "@/lib/portfolio-content"
 import { AnimateIn } from "@/components/animate-in"
 import { useLanguage } from "@/lib/language-context"
@@ -10,6 +10,7 @@ const iconMap = {
   cpu: Cpu,
   sync: RefreshCw,
   chart: BarChart3,
+  template: FileText,
 }
 
 export function FeaturedProjects() {
