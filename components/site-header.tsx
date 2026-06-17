@@ -29,9 +29,9 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 px-4 pt-4 md:px-8 lg:px-12">
-      <div className="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-border/80 bg-background/78 px-4 py-3 shadow-[0_18px_60px_-36px_rgba(15,23,42,0.3)] backdrop-blur-xl md:px-6">
+      <div className="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-border/80 bg-background/82 px-4 py-3 shadow-[0_18px_60px_-36px_rgba(15,23,42,0.3)] backdrop-blur-xl md:px-6">
         <div className="min-w-0">
-          <p className="text-sm font-semibold tracking-[-0.02em] text-foreground">Raffi Windarto</p>
+          <p className="text-sm font-semibold text-foreground">Raffi Windarto</p>
           <p className="text-[11px] font-mono uppercase tracking-[0.22em] text-muted-foreground">
             Osaka / Remote
           </p>
@@ -47,7 +47,7 @@ export function SiteHeader() {
                 type="button"
                 onClick={() => scrollTo(id)}
                 className={cn(
-                  "relative rounded-full px-4 py-2 text-sm transition-colors",
+                  "relative rounded-full px-4 py-2 text-sm transition-[background-color,color,transform] duration-200 ease-[var(--ease-out-quint)] active:scale-[0.98]",
                   isActive
                     ? "bg-secondary text-foreground"
                     : "text-muted-foreground hover:bg-secondary hover:text-foreground"
@@ -67,14 +67,14 @@ export function SiteHeader() {
           <button
             type="button"
             onClick={toggle}
-            className="hidden rounded-full border border-border px-3 py-1.5 text-[11px] font-mono uppercase tracking-[0.18em] text-muted-foreground transition-colors hover:border-accent/40 hover:text-accent sm:inline-flex"
+            className="hidden rounded-full border border-border px-3 py-1.5 text-[11px] font-mono uppercase tracking-[0.18em] text-muted-foreground transition-[border-color,color,transform] duration-200 ease-[var(--ease-out-quint)] hover:-translate-y-0.5 hover:border-accent/40 hover:text-accent active:translate-y-0 sm:inline-flex"
           >
             {t.nav.langToggle}
           </button>
 
           <Link
             href="/demos"
-            className="hidden rounded-full border border-accent/20 bg-accent/8 px-3 py-1.5 text-[11px] font-mono uppercase tracking-[0.18em] text-accent transition-colors hover:border-accent/40 hover:bg-accent/12 sm:inline-flex"
+            className="hidden rounded-full border border-accent/20 bg-accent/8 px-3 py-1.5 text-[11px] font-mono uppercase tracking-[0.18em] text-accent transition-[background-color,border-color,transform] duration-200 ease-[var(--ease-out-quint)] hover:-translate-y-0.5 hover:border-accent/40 hover:bg-accent/12 active:translate-y-0 sm:inline-flex"
           >
             {t.nav.demosLive}
           </Link>
@@ -84,7 +84,7 @@ export function SiteHeader() {
             <SheetTrigger asChild>
               <button
                 type="button"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-border bg-background text-muted-foreground transition-colors hover:text-foreground md:hidden"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-border bg-background text-muted-foreground transition-[color,transform] duration-200 ease-[var(--ease-out-quint)] hover:text-foreground active:scale-[0.96] md:hidden"
                 aria-label="Open menu"
               >
                 <Menu className="h-4 w-4" />

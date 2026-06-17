@@ -19,13 +19,13 @@ export function Footer() {
   return (
     <footer className="border-t border-border px-6 py-16 md:px-12 lg:px-24">
       <div className="mx-auto max-w-6xl">
-        <div className="rounded-[2rem] border border-border/80 bg-[linear-gradient(135deg,rgba(255,255,255,0.82),rgba(244,247,246,0.96))] p-8 shadow-[0_32px_80px_-42px_rgba(15,23,42,0.28)] md:p-10">
+        <div className="rounded-xl border border-border/80 bg-[linear-gradient(135deg,rgba(255,255,255,0.82),rgba(244,247,246,0.96))] p-8 shadow-[0_32px_80px_-42px_rgba(15,23,42,0.28)] md:p-10">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-3xl">
               <p className="text-sm font-mono uppercase tracking-[0.24em] text-accent">
                 {f.getInTouchLabel}
               </p>
-              <h2 className="mt-3 text-3xl font-semibold tracking-[-0.04em] text-foreground md:text-4xl">
+              <h2 className="mt-3 text-3xl font-semibold text-foreground md:text-4xl">
                 {f.heading}
               </h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
@@ -42,21 +42,21 @@ export function Footer() {
                     href={link.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-2 text-sm text-foreground transition-colors hover:border-accent/40 hover:text-accent"
+                    className="group inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-2 text-sm text-foreground transition-[border-color,color,transform] duration-300 ease-[var(--ease-out-quint)] hover:-translate-y-0.5 hover:border-accent/40 hover:text-accent active:translate-y-0"
                   >
                     <Icon className="h-4 w-4" />
                     {link.name}
-                    <ArrowUpRight className="h-4 w-4" />
+                    <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                   </a>
                 ) : (
                   <Link
                     key={link.name}
                     href={link.href}
-                    className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-2 text-sm text-foreground transition-colors hover:border-accent/40 hover:text-accent"
+                    className="group inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-2 text-sm text-foreground transition-[border-color,color,transform] duration-300 ease-[var(--ease-out-quint)] hover:-translate-y-0.5 hover:border-accent/40 hover:text-accent active:translate-y-0"
                   >
                     <Icon className="h-4 w-4" />
                     {link.name}
-                    <ArrowUpRight className="h-4 w-4" />
+                    <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                   </Link>
                 )
               })}
@@ -67,7 +67,7 @@ export function Footer() {
             {f.fitSignals.map((item) => (
               <div
                 key={item.label}
-                className="rounded-[1.5rem] border border-border/70 bg-background/82 px-5 py-5"
+                className="rounded-lg border border-border/70 bg-background/82 px-5 py-5 shadow-[0_18px_44px_-38px_rgba(15,23,42,0.36)] transition-[border-color,background-color,transform] duration-300 ease-[var(--ease-out-quint)] hover:-translate-y-0.5 hover:border-accent/30 hover:bg-card"
               >
                 <p className="text-sm font-medium text-foreground">{item.label}</p>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.detail}</p>

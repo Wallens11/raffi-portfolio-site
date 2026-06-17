@@ -12,14 +12,14 @@ export function CaseStudies() {
   const caseStudies = getCaseStudyPreviews()
 
   return (
-    <section id="case-studies" className="px-6 md:px-12 lg:px-24 py-24">
-      <div className="max-w-6xl mx-auto">
+    <section id="case-studies" className="px-6 py-24 md:px-12 lg:px-24">
+      <div className="mx-auto max-w-6xl">
         <AnimateIn>
-          <div className="flex items-center gap-4 mb-4">
-            <span className="text-sm font-mono text-accent tracking-wide">04</span>
-            <h2 className="text-sm font-mono text-muted-foreground uppercase tracking-wide">{cs.sectionLabel}</h2>
+          <div className="mb-4 flex items-center gap-4">
+            <span className="text-sm font-mono tracking-wide text-accent">04</span>
+            <h2 className="text-sm font-mono uppercase tracking-wide text-muted-foreground">{cs.sectionLabel}</h2>
           </div>
-          <p className="text-2xl md:text-3xl font-medium text-foreground mb-16 max-w-2xl text-balance">
+          <p className="mb-16 max-w-2xl text-2xl font-medium text-foreground text-balance md:text-3xl">
             {cs.heading}
           </p>
         </AnimateIn>
@@ -27,15 +27,15 @@ export function CaseStudies() {
         <div className="space-y-12">
           {caseStudies.map((study, index) => (
             <AnimateIn key={study.title} delay={(index + 1) as 1 | 2 | 3}>
-              <article className="group border border-border rounded-lg overflow-hidden hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_12px_40px_-12px_rgba(15,23,42,0.14)] transition-all duration-300">
-                <div className="p-8 md:p-10 bg-card">
-                  <div className="flex items-center justify-between mb-8">
+              <article className="group overflow-hidden rounded-xl border border-border/80 bg-card shadow-[0_22px_70px_-54px_rgba(15,23,42,0.5)] transition-[border-color,box-shadow,transform] duration-300 ease-[var(--ease-out-quint)] hover:-translate-y-1 hover:border-accent/45 hover:shadow-[0_24px_80px_-48px_rgba(15,23,42,0.62)] focus-within:border-accent/45">
+                <div className="bg-card p-8 md:p-10">
+                  <div className="mb-8 flex items-center justify-between">
                     <div className="flex items-center gap-4">
                       <span className="text-3xl font-mono text-accent/40">
                         {String(index + 1).padStart(2, "0")}
                       </span>
                       <div>
-                        <h3 className="text-xl md:text-2xl font-semibold text-foreground group-hover:text-accent transition-colors">
+                        <h3 className="text-xl font-semibold text-foreground transition-colors duration-300 group-hover:text-accent md:text-2xl">
                           {study.title}
                         </h3>
                         {study.status ? (
@@ -45,25 +45,25 @@ export function CaseStudies() {
                         ) : null}
                       </div>
                     </div>
-                    <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-accent group-hover:translate-x-1 transition-all" />
+                    <ArrowRight className="h-5 w-5 text-muted-foreground transition-[color,transform] duration-300 group-hover:translate-x-1 group-hover:text-accent" />
                   </div>
 
-                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                  <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                     <div>
-                      <h4 className="text-xs font-mono text-accent uppercase tracking-wide mb-3">{cs.problemLabel}</h4>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{study.problem}</p>
+                      <h4 className="mb-3 text-xs font-mono uppercase tracking-wide text-accent">{cs.problemLabel}</h4>
+                      <p className="text-sm leading-relaxed text-muted-foreground">{study.problem}</p>
                     </div>
                     <div>
-                      <h4 className="text-xs font-mono text-accent uppercase tracking-wide mb-3">{cs.constraintsLabel}</h4>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{study.constraints}</p>
+                      <h4 className="mb-3 text-xs font-mono uppercase tracking-wide text-accent">{cs.constraintsLabel}</h4>
+                      <p className="text-sm leading-relaxed text-muted-foreground">{study.constraints}</p>
                     </div>
                     <div>
-                      <h4 className="text-xs font-mono text-accent uppercase tracking-wide mb-3">{cs.decisionsLabel}</h4>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{study.decisions}</p>
+                      <h4 className="mb-3 text-xs font-mono uppercase tracking-wide text-accent">{cs.decisionsLabel}</h4>
+                      <p className="text-sm leading-relaxed text-muted-foreground">{study.decisions}</p>
                     </div>
                     <div>
-                      <h4 className="text-xs font-mono text-accent uppercase tracking-wide mb-3">{cs.outcomeLabel}</h4>
-                      <p className="text-sm text-foreground font-medium leading-relaxed">{study.outcome}</p>
+                      <h4 className="mb-3 text-xs font-mono uppercase tracking-wide text-accent">{cs.outcomeLabel}</h4>
+                      <p className="text-sm font-medium leading-relaxed text-foreground">{study.outcome}</p>
                     </div>
                   </div>
 
@@ -71,19 +71,19 @@ export function CaseStudies() {
                     {study.slug ? (
                       <Link
                         href={`/case-studies/${study.slug}`}
-                        className="inline-flex items-center gap-2 text-sm font-medium text-foreground transition-colors hover:text-accent"
+                        className="group/link inline-flex items-center gap-2 text-sm font-medium text-foreground transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/50"
                       >
                         {cs.readFull}
-                        <ArrowRight className="h-4 w-4" />
+                        <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover/link:translate-x-1" />
                       </Link>
                     ) : null}
                     {study.demoHref ? (
                       <Link
                         href={study.demoHref}
-                        className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
+                        className="group/link inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/50"
                       >
                         {cs.tryDemo}
-                        <ArrowRight className="h-4 w-4" />
+                        <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover/link:translate-x-1" />
                       </Link>
                     ) : null}
                   </div>

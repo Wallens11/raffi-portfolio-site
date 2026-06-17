@@ -27,7 +27,7 @@ export default async function DemosIndexPage() {
           <p className="text-sm font-mono uppercase tracking-[0.28em] text-accent">
             Runnable Demos
           </p>
-          <h1 className="mt-5 text-4xl font-semibold tracking-[-0.04em] text-balance md:text-5xl">
+          <h1 className="mt-5 text-4xl font-semibold text-balance md:text-5xl">
             Product surfaces, fake data.
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-8 text-muted-foreground md:text-lg">
@@ -45,7 +45,7 @@ export default async function DemosIndexPage() {
               <p className="text-xs font-mono uppercase tracking-[0.22em] text-accent">
                 {demo.eyebrow}
               </p>
-              <h2 className="mt-3 text-2xl font-semibold tracking-[-0.02em] text-foreground group-hover:text-accent transition-colors">
+              <h2 className="mt-3 text-2xl font-semibold text-foreground group-hover:text-accent transition-colors">
                 {demo.title}
               </h2>
               <p className="mt-4 text-sm leading-7 text-muted-foreground">

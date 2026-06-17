@@ -128,7 +128,7 @@ export function InternalMetricsDashboardDemo() {
         ].map((stat) => (
           <div key={stat.label} className="border border-border/80 bg-card/70 px-5 py-4">
             <p className="text-[11px] font-mono uppercase tracking-[0.22em] text-muted-foreground">{stat.label}</p>
-            <p className="mt-2 text-3xl font-semibold tracking-[-0.04em] text-foreground">{stat.value}</p>
+            <p className="mt-2 text-3xl font-semibold text-foreground">{stat.value}</p>
           </div>
         ))}
       </div>

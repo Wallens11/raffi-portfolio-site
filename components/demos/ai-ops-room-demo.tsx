@@ -139,7 +139,7 @@ export function AiOpsRoomDemo() {
           <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between mb-5">
             <div>
               <p className="text-xs font-mono uppercase tracking-[0.22em] text-accent">Selected task</p>
-              <h2 className="mt-2 text-xl font-semibold tracking-[-0.02em] text-foreground">
+              <h2 className="mt-2 text-xl font-semibold text-foreground">
                 {selectedTask.title}
               </h2>
               <p className="text-xs font-mono text-muted-foreground/60 mt-1">{selectedTask.id}</p>

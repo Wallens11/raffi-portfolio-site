@@ -66,7 +66,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
               <p className="text-sm font-mono uppercase tracking-[0.28em] text-accent">
                 {study.hero.eyebrow}
               </p>
-              <h1 className="mt-5 max-w-3xl text-5xl font-semibold tracking-[-0.05em] text-balance md:text-6xl">
+              <h1 className="mt-5 max-w-3xl text-5xl font-semibold text-balance md:text-6xl">
                 {study.title}
               </h1>
               <p className="mt-6 max-w-3xl text-xl leading-relaxed text-foreground/88 md:text-2xl">
@@ -100,7 +100,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
               <p className="text-xs font-mono uppercase tracking-[0.24em] text-muted-foreground">
                 {study.summary.label}
               </p>
-              <p className="mt-3 text-3xl font-semibold tracking-[-0.04em] text-foreground">
+              <p className="mt-3 text-3xl font-semibold text-foreground">
                 {study.summary.value}
               </p>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
@@ -121,7 +121,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
               <p className="text-[11px] font-mono uppercase tracking-[0.22em] text-muted-foreground">
                 {stat.label}
               </p>
-              <p className="mt-3 text-2xl font-semibold tracking-[-0.03em] text-foreground">
+              <p className="mt-3 text-2xl font-semibold text-foreground">
                 {stat.value}
               </p>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
@@ -172,7 +172,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                   <p className="text-xs font-mono uppercase tracking-[0.26em] text-accent">
                     {String(index + 1).padStart(2, "0")}
                   </p>
-                  <h2 className="mt-3 text-2xl font-semibold tracking-[-0.03em] text-foreground">
+                  <h2 className="mt-3 text-2xl font-semibold text-foreground">
                     {section.title}
                   </h2>
                 </div>
@@ -207,7 +207,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
             <p className="text-sm font-mono uppercase tracking-[0.24em] text-accent">
               Continue Exploring
             </p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-[-0.04em] text-foreground">
+            <h2 className="mt-3 text-3xl font-semibold text-foreground">
               {relatedStudy
                 ? `${relatedStudy.title} is also live.`
                 : "More portfolio builds are on the way."}

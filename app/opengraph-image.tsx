@@ -17,7 +17,7 @@ export default function OpenGraphImage() {
           height: "100%",
           width: "100%",
           background:
-            "radial-gradient(circle at top left, rgba(78, 183, 167, 0.20), transparent 32%), linear-gradient(135deg, #f7f8f5 0%, #eef2ef 48%, #f8faf8 100%)",
+            "linear-gradient(135deg, rgba(78, 183, 167, 0.12) 0%, rgba(247, 248, 245, 0.98) 36%, #eef2ef 70%, #f8faf8 100%)",
           color: "#111827",
           fontFamily: "sans-serif",
         }}
@@ -51,7 +51,6 @@ export default function OpenGraphImage() {
                   fontSize: 74,
                   lineHeight: 1.02,
                   fontWeight: 700,
-                  letterSpacing: "-0.05em",
                 }}
               >
                 Product-minded
@@ -79,7 +78,7 @@ export default function OpenGraphImage() {
                 width: 280,
               }}
             >
-              {["AI Ops Room Demo", "Record Sync Service Demo", "3 public case studies"].map((item) => (
+              {["Ops Room demo", "Record Sync pipeline", "9 case studies"].map((item) => (
                 <div
                   key={item}
                   style={{
@@ -88,7 +87,7 @@ export default function OpenGraphImage() {
                     justifyContent: "center",
                     border: "1px solid rgba(17,24,39,0.10)",
                     background: "rgba(255,255,255,0.82)",
-                    borderRadius: 24,
+                    borderRadius: 12,
                     padding: "18px 22px",
                     fontSize: 22,
                     color: "rgba(17,24,39,0.76)",

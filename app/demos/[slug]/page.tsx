@@ -82,7 +82,7 @@ export default async function DemoPage({ params }: PageProps) {
               <p className="text-sm font-mono uppercase tracking-[0.28em] text-accent">
                 {demo.eyebrow}
               </p>
-              <h1 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-balance md:text-5xl">
+              <h1 className="mt-4 text-4xl font-semibold text-balance md:text-5xl">
                 {demo.title}
               </h1>
               <p className="mt-5 text-base leading-8 text-muted-foreground md:text-lg">
