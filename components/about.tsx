@@ -13,7 +13,7 @@ export function About() {
       <div className="max-w-6xl mx-auto">
         <AnimateIn>
           <div className="flex items-center gap-4 mb-4">
-            <span className="text-sm font-mono text-accent tracking-wide">05</span>
+            <span className="text-sm font-mono text-accent tracking-wide">06</span>
             <h2 className="text-sm font-mono text-muted-foreground uppercase tracking-wide">{a.sectionLabel}</h2>
           </div>
         </AnimateIn>

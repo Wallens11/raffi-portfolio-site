@@ -82,6 +82,20 @@ export const translations = {
       readCaseStudy: "Read full case study",
       tryDemo: "Try runnable demo",
     },
+    productSnapshots: {
+      sectionLabel: "Product Snapshots",
+      heading: "A quicker way to see which product stories are strongest in an interview.",
+      intro:
+        "These are the examples worth leading with: they show product judgment, backend reliability, and public-safe handling of private work.",
+      boundaryLabel: "Public-safe boundary",
+      boundaryText:
+        "The portfolio explains architecture, decisions, and outcomes. Private source code, client data, credentials, raw screenshots, and internal artifacts stay out of the public surface.",
+      openCaseStudy: "Open case study",
+      flowLabel: "Document Template Studio flow",
+      flowHeading: "A private migration product, shown through a safe technical diagram.",
+      flowNote:
+        "This gives interviewers enough technical depth to ask real questions without publishing internal project material.",
+    },
     engineeringPrinciples: {
       sectionLabel: "Engineering Principles",
       heading: "How I think about building systems that last.",
@@ -285,6 +299,20 @@ export const translations = {
       heading: "課題整理から実装まで説明できるプロダクトとシステム。",
       readCaseStudy: "ケーススタディ全文を読む",
       tryDemo: "実際に動くデモを試す",
+    },
+    productSnapshots: {
+      sectionLabel: "プロダクト概要",
+      heading: "面接で特に説明しやすいプロダクトストーリーを短く確認できます。",
+      intro:
+        "プロダクト判断、バックエンドの信頼性、非公開案件を安全に説明する姿勢が伝わる代表例です。",
+      boundaryLabel: "公開範囲の境界",
+      boundaryText:
+        "ポートフォリオではアーキテクチャ、判断、成果のみを説明します。非公開ソースコード、顧客データ、認証情報、実際のスクリーンショット、内部資料は公開しません。",
+      openCaseStudy: "ケーススタディを開く",
+      flowLabel: "Document Template Studio の流れ",
+      flowHeading: "非公開のマイグレーションプロダクトを、安全な技術図として説明。",
+      flowNote:
+        "内部資料を公開せずに、面接で具体的な技術質問ができるだけの深さを残しています。",
     },
     engineeringPrinciples: {
       sectionLabel: "エンジニアリング原則",

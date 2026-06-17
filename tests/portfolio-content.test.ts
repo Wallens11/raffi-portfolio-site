@@ -5,6 +5,8 @@ import {
   getCaseStudies,
   getCaseStudyBySlug,
   getFeaturedProjects,
+  getProductPipelineSteps,
+  getProductSnapshots,
 } from "@/lib/portfolio-content"
 
 describe("portfolio content", () => {
@@ -129,6 +131,42 @@ describe("portfolio content", () => {
       const slug = project.demoHref.replace("/demos/", "")
       expect(demoSlugs.has(slug)).toBe(true)
     }
+  })
+
+  it("surfaces interview-ready product snapshots without internal project markers", () => {
+    const snapshots = getProductSnapshots()
+    const pipelineSteps = getProductPipelineSteps()
+    const publicText = JSON.stringify({ snapshots, pipelineSteps })
+
+    expect(snapshots).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          title: "Document Template Studio",
+          scope: "Private product work",
+          href: "/case-studies/document-template-studio",
+        }),
+        expect.objectContaining({
+          title: "AI Ops Room",
+          href: "/case-studies/ai-ops-room",
+        }),
+        expect.objectContaining({
+          title: "Record Sync Service",
+          href: "/case-studies/record-sync-service",
+        }),
+        expect.objectContaining({
+          title: "Kakeibo Budget App",
+          href: "/case-studies/kakeibo",
+        }),
+      ])
+    )
+    expect(pipelineSteps.map((step) => step.label)).toEqual([
+      "Captured input",
+      "Schema validation",
+      "Normalization",
+      "Review studio",
+      "Generated output",
+    ])
+    expect(publicText).not.toMatch(/Fun Tone|fun-tone|funtoco|Repotone|RakuVisa|FunBase/i)
   })
 
   it("exposes runnable demos for the two rebuilt project issues", () => {

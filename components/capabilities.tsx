@@ -12,7 +12,7 @@ export function Capabilities() {
       <div className="max-w-6xl mx-auto">
         <AnimateIn>
           <div className="flex items-center gap-4 mb-4">
-            <span className="text-sm font-mono text-accent tracking-wide">03</span>
+            <span className="text-sm font-mono text-accent tracking-wide">04</span>
             <h2 className="text-sm font-mono text-muted-foreground uppercase tracking-wide">{c.sectionLabel}</h2>
           </div>
           <p className="text-2xl md:text-3xl font-medium text-foreground mb-16 max-w-2xl text-balance">

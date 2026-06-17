@@ -5,6 +5,7 @@ import { SiteHeader } from "@/components/site-header"
 import { Hero } from "@/components/hero"
 import { RecruiterSummary } from "@/components/recruiter-summary"
 import { CurrentFocus } from "@/components/current-focus"
+import { ProductSnapshots } from "@/components/product-snapshots"
 import { FeaturedProjects } from "@/components/featured-projects"
 import { EngineeringPrinciples } from "@/components/engineering-principles"
 import { Capabilities } from "@/components/capabilities"
@@ -26,6 +27,7 @@ export default function Home() {
       <Hero />
       <RecruiterSummary />
       <CurrentFocus />
+      <ProductSnapshots />
       <FeaturedProjects />
       <EngineeringPrinciples />
       <Capabilities />

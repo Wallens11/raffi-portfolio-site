@@ -23,7 +23,7 @@ export function FeaturedProjects() {
       <div className="mx-auto max-w-6xl">
         <AnimateIn>
           <div className="mb-4 flex items-center gap-4">
-            <span className="text-sm font-mono tracking-wide text-accent">01</span>
+            <span className="text-sm font-mono tracking-wide text-accent">02</span>
             <h2 className="text-sm font-mono uppercase tracking-wide text-muted-foreground">{fp.sectionLabel}</h2>
           </div>
           <p className="mb-16 max-w-2xl text-2xl font-medium text-foreground text-balance md:text-3xl">

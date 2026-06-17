@@ -9,6 +9,20 @@ export type FeaturedProject = {
   status?: string
 }
 
+export type ProductSnapshot = {
+  title: string
+  scope: string
+  signal: string
+  proof: string
+  href: string
+  icon: "template" | "ops" | "sync" | "budget"
+}
+
+export type ProductPipelineStep = {
+  label: string
+  detail: string
+}
+
 export type CaseStudyPreview = {
   title: string
   slug?: string
@@ -935,6 +949,72 @@ const featuredProjects: FeaturedProject[] = [
   },
 ]
 
+const productSnapshots: ProductSnapshot[] = [
+  {
+    title: "Document Template Studio",
+    scope: "Private product work",
+    signal:
+      "Migrates vendor-shaped report templates into a stable, reviewable internal schema.",
+    proof:
+      "Good for explaining migration boundaries, zod validation, deterministic normalization, and how private artifacts stay private.",
+    href: "/case-studies/document-template-studio",
+    icon: "template",
+  },
+  {
+    title: "AI Ops Room",
+    scope: "Runnable demo",
+    signal:
+      "Queue-first operations console for AI task routing, trust signals, and handoff continuity.",
+    proof:
+      "Good for walking through task state, runtime choice, safe retry thinking, and operator-facing UX decisions.",
+    href: "/case-studies/ai-ops-room",
+    icon: "ops",
+  },
+  {
+    title: "Record Sync Service",
+    scope: "Runnable demo",
+    signal:
+      "Webhook-driven sync flow with canonical fetches and duplicate-safe identity resolution.",
+    proof:
+      "Good for explaining backend reliability from intake to diagnostics without exposing real records.",
+    href: "/case-studies/record-sync-service",
+    icon: "sync",
+  },
+  {
+    title: "Kakeibo Budget App",
+    scope: "Live personal product",
+    signal:
+      "Personal finance app with guest mode, multi-currency accounting, and OCR receipt entry.",
+    proof:
+      "Good for showing product sense, cross-platform tradeoffs, and daily-use UX beyond internal tools.",
+    href: "/case-studies/kakeibo",
+    icon: "budget",
+  },
+]
+
+const productPipelineSteps: ProductPipelineStep[] = [
+  {
+    label: "Captured input",
+    detail: "Browser export or runtime response sample, sanitized before public explanation.",
+  },
+  {
+    label: "Schema validation",
+    detail: "zod validates the vendor-shaped payload and fails loudly on mismatch.",
+  },
+  {
+    label: "Normalization",
+    detail: "Coordinates, style aliases, and page data become a stable internal shape.",
+  },
+  {
+    label: "Review studio",
+    detail: "Humans compare output before rollout instead of reading raw JSON.",
+  },
+  {
+    label: "Generated output",
+    detail: "Deterministic result can be tested, diffed, and rerun safely.",
+  },
+]
+
 const caseStudyPreviews: CaseStudyPreview[] = [
   {
     title: "AI Ops Room",
@@ -1164,6 +1244,14 @@ const demos: Demo[] = [
 
 export function getFeaturedProjects() {
   return featuredProjects
+}
+
+export function getProductSnapshots() {
+  return productSnapshots
+}
+
+export function getProductPipelineSteps() {
+  return productPipelineSteps
 }
 
 export function getCaseStudyPreviews() {
