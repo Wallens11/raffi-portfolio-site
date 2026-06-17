@@ -8,7 +8,7 @@ const linkIcons = {
   "/demos": Play,
   "/demos/kakeibo": Smartphone,
   "https://github.com/Wallens11": Github,
-  "https://linkedin.com/in/muhammadraffiwindarto": Linkedin,
+  "https://www.linkedin.com/in/muhammad-raffi-windarto-520aa2330/": Linkedin,
   "mailto:raffiwindartobisnis@gmail.com": Mail,
 } as Record<string, React.ElementType>
 

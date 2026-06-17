@@ -4,37 +4,13 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowDown, FileText } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
-import { useCountUp } from "@/hooks/use-count-up"
 
 function StatCard({ label, caption, index }: { label: string; caption: string; index: number }) {
-  // Only animate the first stat (the numeric one: "3+ years" / "3年以上")
-  const isNumeric = index === 0
-  const { count, ref } = useCountUp(isNumeric ? 3 : 0, 1400)
-
-  if (isNumeric) {
-    // Extract prefix/suffix around the number (handles "3+ years" and "3年以上")
-    const match = label.match(/^(\D*)(\d+)(.*)$/)
-    const prefix = match?.[1] ?? ""
-    const suffix = match?.[3] ?? ""
-
-    return (
-      <div
-        ref={ref}
-        className="rounded-2xl border border-border/80 bg-background/70 px-4 py-4 backdrop-blur-sm"
-      >
-        <p className="text-sm font-mono uppercase tracking-[0.2em] text-accent">
-          {prefix}
-          <span className="tabular-nums">{count}</span>
-          {suffix}
-        </p>
-        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{caption}</p>
-      </div>
-    )
-  }
-
   return (
     <div className="rounded-2xl border border-border/80 bg-background/70 px-4 py-4 backdrop-blur-sm">
-      <p className="text-sm font-mono uppercase tracking-[0.2em] text-accent">{label}</p>
+      <p className="text-sm font-mono uppercase tracking-[0.2em] text-accent">
+        {index === 0 ? <span className="tabular-nums">{label}</span> : label}
+      </p>
       <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{caption}</p>
     </div>
   )

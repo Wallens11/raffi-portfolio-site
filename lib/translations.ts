@@ -170,7 +170,7 @@ export const translations = {
       ],
       cvLabel: "CV and work history",
       cvLinks: [
-        { label: "Request CV by email", href: "mailto:muhammadraffiwindarto@gmail.com?subject=CV%20request" },
+        { label: "Request CV by email", href: "mailto:raffiwindartobisnis@gmail.com?subject=CV%20request" },
       ],
     },
     footer: {
@@ -182,8 +182,8 @@ export const translations = {
         { name: "Browse demos", href: "/demos" },
         { name: "Kakeibo demo", href: "/demos/kakeibo" },
         { name: "GitHub", href: "https://github.com/Wallens11", external: true },
-        { name: "LinkedIn", href: "https://linkedin.com/in/muhammadraffiwindarto", external: true },
-        { name: "Email me", href: "mailto:muhammadraffiwindarto@gmail.com", external: true },
+        { name: "LinkedIn", href: "https://www.linkedin.com/in/muhammad-raffi-windarto-520aa2330/", external: true },
+        { name: "Email me", href: "mailto:raffiwindartobisnis@gmail.com", external: true },
       ],
       fitSignals: [
         {
@@ -374,7 +374,7 @@ export const translations = {
       ],
       cvLabel: "CV・職務経歴",
       cvLinks: [
-        { label: "メールでCVを依頼", href: "mailto:muhammadraffiwindarto@gmail.com?subject=CV%20request" },
+        { label: "メールでCVを依頼", href: "mailto:raffiwindartobisnis@gmail.com?subject=CV%20request" },
       ],
     },
     footer: {
@@ -386,8 +386,8 @@ export const translations = {
         { name: "デモを試す", href: "/demos" },
         { name: "Kakeiboデモ", href: "/demos/kakeibo" },
         { name: "GitHub", href: "https://github.com/Wallens11", external: true },
-        { name: "LinkedIn", href: "https://linkedin.com/in/muhammadraffiwindarto", external: true },
-        { name: "メールで連絡", href: "mailto:muhammadraffiwindarto@gmail.com", external: true },
+        { name: "LinkedIn", href: "https://www.linkedin.com/in/muhammad-raffi-windarto-520aa2330/", external: true },
+        { name: "メールで連絡", href: "mailto:raffiwindartobisnis@gmail.com", external: true },
       ],
       fitSignals: [
         {
