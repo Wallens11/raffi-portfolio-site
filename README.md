@@ -89,17 +89,8 @@ See:
 - `docs/architecture.md`
 - `docs/development-notes.md`
 
-## AI Usage
+## Public Review Notes
 
-AI was used as support for idea organization, initial structure, wording review, and implementation assistance. Requirements, public-safety review, code changes, verification, and final judgment were handled manually.
-
-Japanese recruiter wording:
-
-> AIはアイデア整理や初期構成の参考として利用しましたが、要件整理、実装内容の確認、修正、動作確認、最終判断は自分で行いました。
-
-## Future Improvements
-
-- Keep reducing generic portfolio wording in case-study copy.
-- Add more focused screenshots only when they use fake or public-safe data.
-- Tighten mobile/browser verification notes for each demo.
-- Add small implementation notes per case study when the tradeoff is important for interviews.
+- No private screenshots, customer data, production credentials, or internal exports are included.
+- Demo content is fake or rebuilt for public review.
+- Claims are intentionally conservative and can be discussed in an interview.
