@@ -475,6 +475,7 @@ const caseStudies: CaseStudy[] = [
   {
     slug: "document-template-studio",
     title: "Document Template Studio",
+    demoHref: "/demos/document-template-studio",
     hero: {
       eyebrow: "Migration Tooling Case Study",
       intro:
@@ -935,6 +936,7 @@ const featuredProjects: FeaturedProject[] = [
     icon: "template",
     highlight: "Presented as product work only; source code and internal artifacts stay private.",
     href: "/case-studies/document-template-studio",
+    demoHref: "/demos/document-template-studio",
     status: "Private product work",
   },
   {
@@ -1134,6 +1136,7 @@ const caseStudyPreviews: CaseStudyPreview[] = [
   {
     title: "Document Template Studio",
     slug: "document-template-studio",
+    demoHref: "/demos/document-template-studio",
     problem:
       "Report templates needed to migrate from a vendor system with no official export API — the only data source was runtime proxy responses and browser traffic.",
     constraints:
@@ -1146,6 +1149,19 @@ const caseStudyPreviews: CaseStudyPreview[] = [
 ]
 
 const demos: Demo[] = [
+  {
+    slug: "document-template-studio",
+    title: "Document Template Studio Demo",
+    eyebrow: "Interactive Demo",
+    description:
+      "A sanitized migration studio showing how a vendor-shaped template response is validated, normalized, reviewed, and exported without exposing private project material.",
+    caseStudyHref: "/case-studies/document-template-studio",
+    highlights: [
+      "Load fake vendor-shaped template payloads",
+      "Run validation and normalize into stable JSON",
+      "Review a simulated template layout before export",
+    ],
+  },
   {
     slug: "ai-ops-room",
     title: "AI Ops Room Demo",

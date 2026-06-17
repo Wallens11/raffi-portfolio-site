@@ -9,6 +9,7 @@ import { FormFlowDemo } from "@/components/demos/formflow-demo"
 import { SecureRecordViewerDemo } from "@/components/demos/secure-record-viewer-demo"
 import { KakeiboDemo } from "@/components/demos/kakeibo-demo"
 import { KotobaTabiDemo } from "@/components/demos/kotoba-tabi-demo"
+import { DocumentTemplateStudioDemo } from "@/components/demos/document-template-studio-demo"
 import { getDemoBySlug, getDemos } from "@/lib/portfolio-content"
 
 type PageProps = {
@@ -23,6 +24,7 @@ const demoComponents = {
   "internal-metrics-dashboard": InternalMetricsDashboardDemo,
   "formflow": FormFlowDemo,
   "secure-record-viewer": SecureRecordViewerDemo,
+  "document-template-studio": DocumentTemplateStudioDemo,
   "kakeibo": KakeiboDemo,
   "kotoba-tabi": KotobaTabiDemo,
 } as const

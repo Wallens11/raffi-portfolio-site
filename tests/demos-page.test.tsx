@@ -7,9 +7,10 @@ import DemoPage, {
 } from "@/app/demos/[slug]/page"
 
 describe("portfolio demos", () => {
-  it("publishes runnable demos for the AI Ops Room and Record Sync Service routes", async () => {
+  it("publishes runnable demos for key portfolio routes", async () => {
     await expect(generateStaticParams()).resolves.toEqual(
       expect.arrayContaining([
+        { slug: "document-template-studio" },
         { slug: "ai-ops-room" },
         { slug: "record-sync-service" },
       ])
@@ -59,6 +60,22 @@ describe("portfolio demos", () => {
     expect(
       screen.getByRole("button", { name: /Run duplicate-safe sync/i })
     ).toBeInTheDocument()
+  })
+
+  it("renders the Document Template Studio demo page with migration workflow controls", async () => {
+    const page = await DemoPage({
+      params: Promise.resolve({ slug: "document-template-studio" }),
+    })
+
+    render(page)
+
+    expect(
+      screen.getByRole("heading", { level: 1, name: /Document Template Studio Demo/i })
+    ).toBeInTheDocument()
+    expect(screen.getByText("Migration review workspace")).toBeInTheDocument()
+    expect(screen.getByRole("button", { name: /Run validation/i })).toBeInTheDocument()
+    expect(screen.getByRole("button", { name: /Export normalized JSON/i })).toBeInTheDocument()
+    expect(screen.getByText(/Fake payloads only/i)).toBeInTheDocument()
   })
 
   it("generates metadata for demo routes", async () => {
