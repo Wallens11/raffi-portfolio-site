@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 
-const SECTION_IDS = ["fast-read", "projects", "case-studies", "about"]
+const SECTION_IDS = ["fast-read", "product-snapshots", "case-studies", "about"]
 
 /**
  * Tracks which section is currently in view by comparing scroll position

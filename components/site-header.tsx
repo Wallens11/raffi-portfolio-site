@@ -15,7 +15,7 @@ export function SiteHeader() {
 
   const links = [
     [t.nav.fastRead, "fast-read"],
-    [t.nav.projects, "projects"],
+    [t.nav.projects, "product-snapshots"],
     [t.nav.caseStudies, "case-studies"],
     [t.nav.about, "about"],
   ]

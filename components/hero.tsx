@@ -21,7 +21,7 @@ export function Hero() {
   const h = t.hero
 
   const scrollToProjects = () => {
-    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })
+    document.getElementById("product-snapshots")?.scrollIntoView({ behavior: "smooth" })
   }
 
   const scrollToCaseStudies = () => {
